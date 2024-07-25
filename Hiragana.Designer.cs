@@ -36,6 +36,8 @@
             label1 = new Label();
             button2 = new Button();
             button3 = new Button();
+            score_lbl = new Label();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)symbol).BeginInit();
             SuspendLayout();
             // 
@@ -94,11 +96,32 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // score_lbl
+            // 
+            score_lbl.AutoSize = true;
+            score_lbl.Location = new Point(450, 323);
+            score_lbl.Name = "score_lbl";
+            score_lbl.Size = new Size(81, 15);
+            score_lbl.TabIndex = 6;
+            score_lbl.Text = "Current score:";
+            // 
+            // button4
+            // 
+            button4.Location = new Point(245, 415);
+            button4.Name = "button4";
+            button4.Size = new Size(110, 25);
+            button4.TabIndex = 7;
+            button4.Text = "Show correct";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Hiragana
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(584, 461);
+            Controls.Add(button4);
+            Controls.Add(score_lbl);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label1);
@@ -124,5 +147,7 @@
         private Label label1;
         private Button button2;
         private Button button3;
+        private Label score_lbl;
+        private Button button4;
     }
 }

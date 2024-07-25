@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("hiragana-quiz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7388cc930d5d10eb0dbf5c82002b509439d5ff56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8417b7383be880f29bd31e7892c5f6c28499d254")]
 [assembly: System.Reflection.AssemblyProductAttribute("hiragana-quiz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("hiragana-quiz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

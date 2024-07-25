@@ -36,9 +36,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(200, 74);
+            button1.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            button1.Location = new Point(375, 115);
             button1.Name = "button1";
-            button1.Size = new Size(150, 75);
+            button1.Size = new Size(230, 110);
             button1.TabIndex = 0;
             button1.Text = "Hiragana";
             button1.UseVisualStyleBackColor = true;
@@ -46,9 +47,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(200, 244);
+            button2.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            button2.Location = new Point(375, 410);
             button2.Name = "button2";
-            button2.Size = new Size(150, 75);
+            button2.Size = new Size(230, 110);
             button2.TabIndex = 1;
             button2.Text = "Katakana";
             button2.UseVisualStyleBackColor = true;
@@ -57,18 +59,20 @@
             // hiragana_score_lbl
             // 
             hiragana_score_lbl.AutoSize = true;
-            hiragana_score_lbl.Location = new Point(200, 162);
+            hiragana_score_lbl.Font = new Font("Segoe UI", 16F);
+            hiragana_score_lbl.Location = new Point(375, 240);
             hiragana_score_lbl.Name = "hiragana_score_lbl";
-            hiragana_score_lbl.Size = new Size(62, 15);
+            hiragana_score_lbl.Size = new Size(116, 30);
             hiragana_score_lbl.TabIndex = 2;
             hiragana_score_lbl.Text = "Top scores";
             // 
             // katakana_score_lbl
             // 
             katakana_score_lbl.AutoSize = true;
-            katakana_score_lbl.Location = new Point(200, 331);
+            katakana_score_lbl.Font = new Font("Segoe UI", 16F);
+            katakana_score_lbl.Location = new Point(375, 535);
             katakana_score_lbl.Name = "katakana_score_lbl";
-            katakana_score_lbl.Size = new Size(62, 15);
+            katakana_score_lbl.Size = new Size(116, 30);
             katakana_score_lbl.TabIndex = 3;
             katakana_score_lbl.Text = "Top scores";
             // 
@@ -76,14 +80,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(534, 411);
+            ClientSize = new Size(964, 781);
             Controls.Add(katakana_score_lbl);
             Controls.Add(hiragana_score_lbl);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Quiz";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();

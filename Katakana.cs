@@ -16,7 +16,9 @@ namespace hiragana_quiz
         {
             InitializeComponent();
             this.parent = parent;
-            string[] katakanas = new string[] { "a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", "shi", "su", "se", "so", "ta", "chi", "tsu", "te", "to", "na", "ni", "nu", "ne", "no", "ha", "hi", "fu", "he", "ho", "ma", "mi", "mu", "me", "mo", "ra", "ri", "ru", "re", "ro", "ya", "yu", "yo", "wa", "wo", "n" };
+            this.score_lbl.Text = "Current score: " + parent.get_k_score();
+
+            string[] katakanas = new string[] { "a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", "shi", "su", "se", "so", "ta", "chi", "tsu", "te", "to", "na", "ni", "nu", "ne", "no", "ha", "hi", "fu", "he", "ho", "ma", "mi", "mu", "me", "mo", "ra", "ri", "ru", "re", "ro", "ya", "yu", "yo", "wa", "wi", "we", "wo", "n" };
             solution = katakanas[katakana];
             this.symbol.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "images", "katakana", solution + ".png"));
         }
@@ -30,7 +32,9 @@ namespace hiragana_quiz
         {
             if (this.textBox1.Text == solution)
             {
-                parent.add_h_score();
+                this.button1.Enabled = false;
+                parent.add_k_score();
+                this.score_lbl.Text = "Current score: " + parent.get_k_score();
                 MessageBox.Show("Correct!");
             }
             else
@@ -43,7 +47,7 @@ namespace hiragana_quiz
         private void button2_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            int random = rnd.Next(0, 45);
+            int random = rnd.Next(0, 47);
             Katakana next = new Katakana(this.parent, random);
             next.Show();
             this.Close();
@@ -54,6 +58,12 @@ namespace hiragana_quiz
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.button1.Enabled = false;
+            MessageBox.Show(solution);
         }
     }
 }

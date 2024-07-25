@@ -19,10 +19,20 @@ namespace hiragana_quiz
             hiragana_score_lbl.Text = "Current score: " + hiragana_score.ToString();
         }
 
+        public int get_h_score()
+        {
+            return hiragana_score;
+        }
+
         public void add_k_score()
         {
             katakana_score++;
             katakana_score_lbl.Text = "Current score: " + katakana_score.ToString();
+        }
+
+        public int get_k_score()
+        {
+            return katakana_score;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -66,7 +76,7 @@ namespace hiragana_quiz
 
             //select katakana randomly and spawn new form
             Random rnd = new Random();
-            int random = rnd.Next(0, 45);
+            int random = rnd.Next(0, 47);
             katakana = new Katakana(this, random);
             katakana.Show();
         }

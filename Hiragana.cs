@@ -14,25 +14,28 @@ namespace hiragana_quiz
     {
 
         private Form1 parent;
-        private string current_hiragana;
+        private string solution;
 
         public Hiragana(Form1 parent, int hiragana)
         {
             InitializeComponent();
             this.parent = parent;
+            this.score_lbl.Text = "Current score: " + parent.get_h_score();
 
             string[] hiraganas = new string[] { "a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", "shi", "su", "se", "so", "ta", "chi", "tsu", "te", "to", "na", "ni", "nu", "ne", "no", "ha", "hi", "fu", "he", "ho", "ma", "mi", "mu", "me", "mo", "ra", "ri", "ru", "re", "ro", "ya", "yu", "yo", "wa", "wo", "n" };
-            current_hiragana = hiraganas[hiragana];
-            this.symbol.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "images", "hiragana", current_hiragana + ".png"));
+            solution = hiraganas[hiragana];
+            this.symbol.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "images", "hiragana", solution + ".png"));
 
         }
 
         //Check-button
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.textBox1.Text == current_hiragana)
+            if (this.textBox1.Text == solution)
             {
+                this.button1.Enabled = false;
                 parent.add_h_score();
+                this.score_lbl.Text = "Current score: " + parent.get_h_score();
                 MessageBox.Show("Correct!");
             }
             else
@@ -56,6 +59,13 @@ namespace hiragana_quiz
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        //Show-button
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.button1.Enabled = false;
+            MessageBox.Show(solution);
         }
     }
 }
