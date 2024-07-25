@@ -33,21 +33,22 @@
             label1 = new Label();
             symbol = new PictureBox();
             button2 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)symbol).BeginInit();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(329, 298);
+            textBox1.Location = new Point(245, 315);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(110, 23);
             textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(339, 341);
+            button1.Location = new Point(245, 350);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(110, 60);
             button1.TabIndex = 1;
             button1.Text = "Check";
             button1.UseVisualStyleBackColor = true;
@@ -56,15 +57,16 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(360, 280);
+            label1.Location = new Point(279, 295);
             label1.Name = "label1";
             label1.Size = new Size(42, 15);
             label1.TabIndex = 2;
             label1.Text = "This is:";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // symbol
             // 
-            symbol.Location = new Point(250, 8);
+            symbol.Location = new Point(172, 15);
             symbol.Name = "symbol";
             symbol.Size = new Size(256, 256);
             symbol.TabIndex = 3;
@@ -72,25 +74,37 @@
             // 
             // button2
             // 
-            button2.Location = new Point(636, 357);
+            button2.Location = new Point(450, 350);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(110, 60);
             button2.TabIndex = 4;
             button2.Text = "Next ->";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(450, 415);
+            button3.Name = "button3";
+            button3.Size = new Size(110, 25);
+            button3.TabIndex = 5;
+            button3.Text = "Quit";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Katakana
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(584, 461);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(symbol);
             Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Name = "Katakana";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Katakana";
             ((System.ComponentModel.ISupportInitialize)symbol).EndInit();
             ResumeLayout(false);
@@ -104,5 +118,6 @@
         private Label label1;
         private PictureBox symbol;
         private Button button2;
+        private Button button3;
     }
 }

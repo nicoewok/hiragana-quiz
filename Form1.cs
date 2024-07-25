@@ -33,6 +33,11 @@ namespace hiragana_quiz
 
         private void button1_Click(object sender, EventArgs e)
         {
+            spawn_hiragana();
+        }
+
+        public void spawn_hiragana()
+        {
             if (hiragana != null)
             {
                 hiragana.Close();
@@ -42,11 +47,16 @@ namespace hiragana_quiz
             //select hiragana randomly and spawn new form
             Random rnd = new Random();
             int random = rnd.Next(0, 45);
-            hiragana = new Hiragana(this, 0);
+            hiragana = new Hiragana(this, random);
             hiragana.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
+        {
+            spawn_katakana();
+        }
+
+        public void spawn_katakana()
         {
             if (katakana != null)
             {

@@ -42,7 +42,18 @@ namespace hiragana_quiz
         //Next-button
         private void button2_Click(object sender, EventArgs e)
         {
+            Random rnd = new Random();
+            int random = rnd.Next(0, 45);
+            Katakana next = new Katakana(this.parent, random);
+            next.Show();
+            this.Close();
+            this.Dispose();
+        }
 
+        //Quit-button
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

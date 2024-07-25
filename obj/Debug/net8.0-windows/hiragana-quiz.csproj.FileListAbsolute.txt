@@ -16,3 +16,5 @@ X:\Users\Nico\Dokumente\dev\Csharp\hiragana-quiz\obj\Debug\net8.0-windows\hiraga
 X:\Users\Nico\Dokumente\dev\Csharp\hiragana-quiz\obj\Debug\net8.0-windows\hiragana-quiz.genruntimeconfig.cache
 X:\Users\Nico\Dokumente\dev\Csharp\hiragana-quiz\obj\Debug\net8.0-windows\ref\hiragana-quiz.dll
 X:\Users\Nico\Dokumente\dev\Csharp\hiragana-quiz\obj\Debug\net8.0-windows\hiragana_quiz.Properties.Resources.resources
+X:\Users\Nico\Dokumente\dev\Csharp\hiragana-quiz\obj\Debug\net8.0-windows\hiragana_quiz.Katakana.resources
+X:\Users\Nico\Dokumente\dev\Csharp\hiragana-quiz\obj\Debug\net8.0-windows\hiragana-quiz.sourcelink.json
